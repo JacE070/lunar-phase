@@ -11,3 +11,65 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Set the font color to something light for contrast */
+body, input, button, p {
+  color: #ffffff;
+}
+
+/* Make the body take up full height and set the background */
+.App {
+  height: 100vh;
+  margin: 0;
+  background: #000000; /* Black background to represent space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Style the header */
+.App-header {
+  background: none;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the main content area */
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the input field and button to stand out */
+input[type="date"], button {
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #333333; /* Dark gray to stand out, but not too much */
+}
+
+button {
+  cursor: pointer;
+  background: #555555; /* Slightly lighter gray for the button */
+}
+
+button:hover {
+  background: #777777; /* Even lighter gray to indicate hover state */
+}
+
+/* Style the footer */
+footer {
+  background: none;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Adjust the img style as needed */
+img {
+  max-width: 90%; /* Adjust as needed */
+  border-radius: 10px; /* Optional: adds rounded corners to the image */
+}
