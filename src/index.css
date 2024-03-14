@@ -70,6 +70,12 @@ footer {
 
 /* Adjust the img style as needed */
 img {
-  max-width: 90%; /* Adjust as needed */
   border-radius: 10px; /* Optional: adds rounded corners to the image */
+}
+
+.moon-phase-slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 300px;
 }

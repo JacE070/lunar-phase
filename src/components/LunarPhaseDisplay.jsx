@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getLunarData } from '../services/lunarService';
-// import { CircleLoader } from 'react-spinners/CircleLoader';
-import ClipLoader from "react-spinners/ClipLoader";
+import { CircleLoader } from 'react-spinners';
 
 const today = new Date().toISOString().split('T')[0];
 
@@ -47,18 +46,20 @@ const LunarPhaseDisplay = () => {
 
   return (
     <div>
-      {isLoading ? (
-        <ClipLoader
-        color="#36d7b7"
-        loading
-        speedMultiplier={0}
-        />  
-      ) : lunarData ? (
-        <div>
-          {/* <h2>{lunarData.phaseName}</h2> */}
-          <img src={lunarData.imageUrl} alt="Moon phase" />
-        </div>
-      ) : null}
+      <div className='moon-phase-slot'>
+        {isLoading ? (
+          <CircleLoader
+          color="#36d7b7"
+          loading
+          speedMultiplier={1}
+          />    
+        ) : lunarData ? (
+          <div>
+            {/* <h2>{lunarData.phaseName}</h2> */}
+            <img src={lunarData.imageUrl} alt="Moon phase" />
+          </div>
+        ) : null}
+      </div>
       <input type="date" value={date} onChange={handleDateChange} />
       <button onClick={fetchLunarData}>Get Moon Phase</button>
     </div>
