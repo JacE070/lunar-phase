@@ -37,8 +37,11 @@ const LunarPhaseDisplay = () => {
         setLocationAllowed(true);
       },
       () => {
-        alert('Location access denied. Defaulting to nearest major city.');
-        setLocationAllowed(false);
+        alert('Location access denied. Defaulting to L.A.');
+        setLocation({
+          latitude: 34.0522,
+          longitude: -118.2437,
+        });
         // Handle the case when the user denies geolocation access
       }
     );
