@@ -42,7 +42,7 @@ const LunarPhaseDisplay = () => {
           latitude: 34.0522,
           longitude: -118.2437,
         });
-        // Handle the case when the user denies geolocation access
+        setLocationAllowed(true);
       }
     );
   }, []);
